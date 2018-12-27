@@ -26,8 +26,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func button(_ sender: UIButton) {
-        print("add to-do item: \(yourName.text)")
-
+//        print("add to-do item: \(yourName.text)")
+        guard let reply = yourName.text else {
+            return
+                {
+                    theReply.add(reply)
+            }
+        }
 }
 
 }
